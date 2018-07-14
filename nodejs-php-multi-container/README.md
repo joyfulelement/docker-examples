@@ -2,6 +2,11 @@ This is an multi-container example with node.js in the backend and php on the fr
 
 It demostrates the use of Docker Compose feature which allows creation of multi-container for our full-stack application.
 
+## Run the example
+
+1. `$ docker-compose up`
+2. Open browser and navigate to http://localhost:5000/ 
+
 
 ## Useful Commands
 
