@@ -1,0 +1,23 @@
+docker build . -t joyfulcontainer/express (-t tag)
+docker run --name=serve -p=3001:5000 joyfulcontainer/serve
+
+docker build . -t joyfulcontainer/express 
+docker run --name=express -p=3002:80 joyfulcontainer/express #will block command line
+docker run --name=express -d -p=3002:80 joyfulcontainer/express #detach mode not blocking command line
+
+docker rm -f <name of container or first 4 letter of container ID>
+docker exec -it express bash #enter bash command within the container 'express'
+#use ctrl+p+q (read escape sequence) to exist the container's bash command
+
+docker build . -t joyfulcontainer/python-flask
+docker tag ab45cff94c88 joyfulcontainer/python-flask #tag image
+
+List all running containers:
+
+docker container ls -a (list all containers, running or not)
+
+Remove all containers:
+
+docker container ls -aq | xargs docker container rm
+
+
