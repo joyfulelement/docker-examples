@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1>Team Names:</h1>
+    <h1>Apparel prices:</h1>
     <ul>
     <?php 
-        $json = file_get_contents('http://players');
-        foreach(json_decode($json)->players as $player) {
-            echo "<li>$player</li>";
+        $json = file_get_contents('http://prices');
+        foreach(json_decode($json) as $price_item) {
+            echo "<li>$price_item->name: $$price_item->price</li>";
         }
     ?>
     </ul>
